@@ -11,6 +11,7 @@ declare module 'nightwatch' {
       password: string
     }): NightwatchCustomCommands
     beRelativeURL(url: string): NightwatchCustomCommands
+    feRelativeURL(url: string, cachebuster: boolean): NightwatchCustomCommands
     // drupalLogin(credentials): NightwatchCustomCommands;
     // drupalLogout(): NightwatchCustomCommands;
     // drupalUserIsLoggedIn(callback): NightwatchCustomCommands;
