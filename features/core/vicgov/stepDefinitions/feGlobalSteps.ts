@@ -13,7 +13,6 @@ Given(
   'I am on {string}',
   { timeout: 3 * 60000 },
   function (this: World, pathname: string) {
-    // Write code here that turns the phrase above into concrete actions
     // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     const cachebuster = true
     return this.browser!.feRelativeURL(pathname, cachebuster)
