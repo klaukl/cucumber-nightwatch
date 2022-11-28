@@ -1,16 +1,33 @@
-// import { DataTable, Given, When, Then } from '@cucumber/cucumber'
-// import World from '../../../support/NightwatchWorld'
+import { DataTable, Given, When, Then } from '@cucumber/cucumber'
+import World from '../../../support/NightwatchWorld'
 
-// import { Eyes, Target, MatchLevel } from '@applitools/eyes-nightwatch'
+import { Eyes, Target, MatchLevel } from '@applitools/eyes-nightwatch'
 
 // When(
-//   'I capture the (page|region) using applitools and compare to test "(.*)"',
+//   'I capture the "(page|region)" using applitools and compare to test "(.*)"',
 //   { timeout: 1 * 180000 },
-//   async function (this: World, ) {
-//     this.browser!.eyesOpen(client, testname);
-//     // browser.eyesOpen(client, testname);
+//   async function (this: World, client: string) {
+//   //  await this.browser!.eyesOpen(client, testname);
+//   //   // browser.eyesOpen(client, testname);
+
+//     await this.browser!.eyesOpen(client, 'test123')
+//         .eyesCheck(Target.window().fully())
+//         .eyesClose()
+//         .end();
+
 //   }
 // )
+
+When(
+  'I capture the page using applitools and compare to test {string}',
+  { timeout: 1 * 180000 },
+  async function (this: World, client: string) {
+    await this.browser!.eyesOpen(client, 'test123')
+      .eyesCheck(Target.window().fully())
+      .eyesClose()
+      .end()
+  }
+)
 
 // When(/^I capture the (page|region) using applitools and compare to test "(.*)"$/, { timeout: 1 * 180000 }, async function (pageOrRegion, testname, dataTable) {
 //   let data = dataTable.rows();

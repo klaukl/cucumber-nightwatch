@@ -5,7 +5,7 @@ The landing page should be tested for visual regressions.
 Scenario: Visual check the landing page "Demo Landing Page" full page
   Given I am on "/demo-landing-page"
   #Then visual test "Home" on "Duck Duck Go"
-  # When I capture the page using applitools and compare to test "Demo Landing Page"
+  When I capture the page using applitools and compare to test "Demo Landing Page"
   #   | command      | value                    |
   #   | strict       |                          |
   #   | layoutRegion | .rpl-news-listing__items |
